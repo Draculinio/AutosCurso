@@ -26,8 +26,8 @@ public class Automovil {
 		return velocidadActual;
 	}
 	
-	public void frenar() {
-		
+	public void frenar(int velocidad) {
+		//TODO: Implementar el freno
 	}
 	
 	public void encender() {

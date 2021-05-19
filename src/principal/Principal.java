@@ -6,14 +6,17 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
-		String var = "Hola Mundo";
-		
-		Automovil auto = new Automovil();
-		auto.setMarca("Ferrari");
-		System.out.println(auto.getMarca());
-		auto.acelerar(100);
-		System.out.println(auto.getVelocidadActual());
-		auto.frenar();
+		Automovil miAuto = new Automovil("Ford", "Falcon", 160, "aaa111", "Celeste");
+		Automovil miSegundoAuto = new Automovil("Chevrolet", "Corsa",160,"ccc222");
+		System.out.println(miAuto.getMarca());
+		System.out.println(miSegundoAuto.getColor());
+		miAuto.encender();
+		miAuto.acelerar(30);
+		System.out.println(miAuto.getVelocidadActual());
+		miAuto.acelerar(50);
+		System.out.println(miAuto.getVelocidadActual());
+		miAuto.setVelocidadMaxima(18000);
+		System.out.println(miAuto.getVelocidadMaxima());
 		
 	}
 

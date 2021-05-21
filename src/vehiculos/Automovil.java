@@ -23,7 +23,6 @@ public class Automovil {
 		this.velocidadMaxima = velocidadMaxima;
 		this.patente = patente;
 		this.color = "Marron";
-		
 	}
 	
 	public void setMarca(String m) {
@@ -34,9 +33,15 @@ public class Automovil {
 		return marca;
 	}
 	
-	public void acelerar(int velocidad) {
-		//Funcionalidad para que no haya velocidad actual superior a la maxima
-		velocidadActual = velocidadActual + velocidad;
+	public void acelerar(int velocidadActual) {
+		int velocidadFinal = this.velocidadActual + velocidadActual;
+		if(velocidadFinal<velocidadMaxima) {
+			this.velocidadActual = velocidadFinal;
+		} else {
+			this.velocidadActual = velocidadMaxima;
+		}
+		
+		//this.velocidadActual = this.velocidadActual + velocidadActual;
 	}
 	
 	public int getVelocidadActual() {
@@ -44,9 +49,12 @@ public class Automovil {
 	}
 	
 	public void frenar(int velocidad) {
-		//TODO: Implementar el freno
-		//HOLA Gsdfddffsdlfjfkdsfkjsdhfdjkslfhdjklfhkljsfdahfdkasl
-		//TODO:fkdfjslkfjdlkfsdjkl
+		int velocidadFinal = this.velocidadActual - velocidadActual;
+		if(velocidadFinal>0) {
+			this.velocidadActual = velocidadFinal;
+		} else {
+			this.velocidadActual = 0;
+		}
 	}
 	
 	public void encender() {

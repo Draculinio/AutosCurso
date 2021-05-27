@@ -101,11 +101,19 @@ public class Automovil {
 	 encender y apagar son dos setter que modifican el estado del encendido
 	*/
 	public void encender() {
-		encendido = true;
+		if(encender = true) {
+			System.out.println("el vehículo ya está encendido");
+		}else {
+			encender = true;
+		}
 	}
 	
 	public void apagar() {
-		encendido = false;
+		if(encendido = false) {
+			System.out.println("el vehículo ya está apagado");
+		}else {
+			encender = false;
+		}
 	}
 
 	public int getVelocidadMaxima() {
